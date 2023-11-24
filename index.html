@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interacciones JavaScript + html +Css</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="ImagenFondo">
+    <div class="panel-lateral">
+        <a href="#" class="close" onclick="panelLateral()">X</a>
+        <h2>Menu principal</h2>
+        <ul>
+            <a href="#">Inicio</a>
+            <a href="#">Tienda</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </ul>
+    </div>
+    <div class="panel-superior">
+        <a href="#" class="close" onclick="PanelSuperior()">X</a>
+        <h2>Menu principal</h2>
+        <ul>
+            <a href="#">Inicio</a>
+            <a href="#">Tienda</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </ul>
+    </div>
+
+    <section>
+        <div class="left">
+            <h2>Interacciones</h2>
+            <button onclick="circulo()"class="circulo">CIRCULO</button>
+            <button onclick="Rectangulo()">Rectangulo</button>
+            <button onclick="Rombo()">Rombo</button>
+            <button onclick="Imagen()">Imágen</button>
+            <button onclick="Gif()">Gif</button>
+            <button onclick="Triangulo()">Triangulo</button>
+            <button onclick="Hoja()">Hoja</button>
+            <button onclick="Pacman()">Pac Man</button>
+            <button onclick="Luna()">Luna</button>
+            <button onclick="Huevo()">Huevo</button>
+            <button onclick="Trapecio()">Trapecio</button>
+            <button onclick="moveTop()">Move Top</button>
+            <button onclick="moveLeft()">Move Left</button>
+            <button onclick="moveButton()">Move Button</button>
+            <button onclick="moveRight()">Move Right</button>
+            <button onclick="PanelSuperior()">Panel Superior</button>
+            <button onclick="panelLateral()">Panel Lateral</button>
+            <button onclick="ImagenFondo()">Cambiar ImagenFondo</button>
+            <button onclick="Color()">Cambiar ColorPrincipal</button>
+            <button onclick="diamante()">Diamante</button>
+
+        </div>
+        <div class="right">
+            <h2 class="fig">Figura</h2>
+            <div id="figura"></div>
+        </div>
+    </section>
+    <script src="js/main.js"></script>
+</body>
+</html>

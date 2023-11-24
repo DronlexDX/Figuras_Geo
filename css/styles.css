@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    min-width: 100vh;
+    background: url(../img/fondo.jpg);
+    font-family: 'Alegreya Sans SC', sans-serif;
+}
+
+section{
+    width: 90%;
+    margin: 100px auto;
+    border: 2px solid white;
+    background: rgba(0, 0, 0, 0.55);
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+}
+h2{
+    color: #00edff;
+    font-size: 40px;
+    padding: 20px;
+
+    
+}
+
+.left, .right{
+    width: 50%;
+    text-align: center;
+    border: 1px solid #2fff8d;
+    padding: 15px;
+
+}
+button{
+    padding: 10px 30px;
+    background: #2fff8d;
+    color: black;
+    font-size: 22px;
+    border-radius: 0 10px 0 10px;
+    border: 1px solid black;
+    transition: .4s;
+    cursor: pointer;
+    margin: 20px;
+    box-shadow: 0 0 8px 0px blue;
+}
+button:hover{
+    border-radius: 20px 0px 20px 0px;
+    background: black;
+    color: #2fff8d;
+}
+#figura{
+    width: 200px;
+    height: 200px;
+    background: black;
+    border: 2px solid #2fff8d;
+    margin: 40px auto;
+    transition: .10s;
+}
+
+#figura.circulo{
+  border-radius: 50%;
+  background: #2fff8d;
+  border: 2px solid black;
+  transition: 3s;
+  transform: rotate(-360deg);
+
+}
+
+#figura.moveTop{
+    transform: translateY(-50px);
+    transition: 0.8s;
+}
+
+#figura.moveLeft{
+    transform: translateX(-50px);
+    transition: 0.8s;
+}
+
+#figura.moveButton{
+    transform: translateY(+50px);
+    transition: 0.8s;
+}
+
+#figura.moveRight{
+    transform: translateX(+50px);
+    transition: 0.8s;
+}
+#figura.Rombo{
+    border: 3px solid #2fff8d; 
+    background: black;
+    width: 200px;
+    height: 200px;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    transition: 0.8s;
+}
+
+#figura.Huevo{
+    width: 137px;
+    height: 200px;
+    border: 3px solid #2fff8d; 
+    background: black;
+    border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+    transition: 3s;
+    transform: rotate(-360deg);
+
+}
+
+#figura.Color{
+    border: 1px solid blue;
+
+}
+#figura.Triangulo{
+    width: 100px;
+    height: 100px;
+    border-bottom: 200px solid #2fff8d;
+    border-right: 200px solid transparent;
+    border-top: 200px solid transparent;
+    border-left: 200px solid transparent;
+    background: none;
+    margin-top: -150px;
+}
+
+.left.active,
+.right.active{
+    border: 2px solid  black;
+}
+
+#figura.Pacman{
+    background: transparent;
+    width: 1px;
+    height: 1px;
+    border: 60px solid black;
+    border-right-color: transparent;
+    border-radius: 50%;
+    margin: auto;
+}
+
+#figura.Luna{
+width: 80px; 
+height: 80px; 
+border-radius: 50%; 
+box-shadow: 15px 15px 0 0 #2fff8d;
+background: transparent;
+border: transparent;
+}
+
+#figura.Imagen{
+    background: url(../img/perro.jpg);
+    background-color: transparent;
+    background-size: cover;
+}
+
+#figura.Gif{
+    background: url(../img/giphy.gif);
+    background-color: transparent;
+    background-size: cover;
+}
+
+
+#figura.Rectangulo{
+    width: 350px;
+    transition: 3s;
+    transform: scale(1);
+}
+
+#figura.Trapecio{
+    width: 250px;
+    height: 0px;
+    border-top: transparent ;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 100px solid #2fff8d;
+    background: none;
+    transition: 3s;
+    transform: rotate(-360deg);
+
+}
+
+#figura.Hoja{
+    border-radius: 0 100px 0 100px;
+    transform: rotate(90deg);
+    background-color: black; 
+    border: 1px solid #2fff8d;
+    margin: auto;
+}
+
+.panel-lateral{
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    left: -450px;
+    width: 400px;
+    background: white;
+    text-align: center;
+    padding: 60px 30px;
+    height: 100vh;
+    transition: 1s;
+    
+}
+
+.panel-lateral.active{
+    left: 0;
+
+}
+.panel-lateral h2{
+    color: black;
+}
+
+.panel-lateral a{
+    background: black;
+    color: aqua;
+    padding: 8px 20px;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.panel-lateral a:hover{
+    transform: scale(1.07);
+}
+
+.panel-lateral a.close{
+position: absolute;
+right: 20px;
+top: 22px;
+background: transparent;
+color: #dceff5;
+font-size: 22px;
+border: transparent;
+}
+
+.panel-superior {
+    position: absolute;
+    z-index: 9;
+    top: -100vh; 
+    left: 0; 
+    width: 100%;
+    background: white;
+    text-align: center;
+    padding: 60px 30px;
+    height: 50vh;
+    transition: 1s;
+}
+
+.panel-superior.active {
+    top: 0; 
+}
+
+.panel-superior h2 {
+    color: black;
+}
+
+.panel-superior a {
+    background: black;
+    color: aqua;
+    padding: 8px 20px;
+    display: block;
+    text-align: center;
+    margin: 15px 0;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.panel-superior a:hover {
+    transform: scale(1.07);
+}
+
+.panel-superior a.close {
+    position: absolute;
+    right: 20px;
+    top: 22px;
+    background: transparent;
+    color: #dceff5;
+    font-size: 22px;
+    border: transparent;
+}
+
+.ImagenFondo.active{
+background: url(../img/fondo2.jpg);
+background-size: cover;
+}
+
+#figura.diamante{
+    margin-left: 35%;
+    border: transparent;
+	width: 0;
+	height: 0;
+	position: relative;
+	margin-bottom: 100px;
+    transition: .4s;
+}
+#figura.diamante::before{
+	content:'';
+	width: 80px;
+	height: 0;
+	display: block;
+	position: absolute;
+	top: -20px;
+	border-right: 50px solid transparent;
+	border-bottom: 50px solid rgb(16, 0, 235);
+	border-left: 50px solid transparent;
+}
+#figura.diamante::after{
+	content:'';
+	width: 0px;
+	height: 0;
+	display: block;
+	position: absolute;
+	top: 29px;
+	border-right: 90px solid transparent;
+	border-top:  100px solid rgb(16, 0, 235);
+	border-left: 90px solid transparent;
+}
